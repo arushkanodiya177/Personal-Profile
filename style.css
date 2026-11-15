@@ -156,7 +156,7 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; colo
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-socials { display: flex; gap: 12px; margin-top: 34px; }
 .hero-socials a, .contact-socials a {
-  width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px;
+  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px;
   border: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; font-weight: 600;
   transition: color .25s, border-color .25s, transform .25s, background .25s;
 }
@@ -248,7 +248,8 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; colo
 .cert-grid, .achieve-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 .cert-card, .achieve-card { padding: 24px; transition: transform .3s, border-color .3s; display: flex; flex-direction: column; }
 .cert-card:hover, .achieve-card:hover { transform: translateY(-4px); border-color: rgba(176,108,255,0.4); }
-.cert-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 16px; border: 1px solid var(--border); background: #fff; }
+/* Fixed certificate image display to fit within the card cleanly */
+.cert-img { width: 100%; height: 200px; object-fit: contain; background: #ffffff; border-radius: 8px; margin-bottom: 16px; border: 1px solid var(--border); padding: 8px; }
 .cert-name, .achieve-title { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 6px; }
 .cert-org { color: var(--accent); font-size: 0.85rem; font-weight: 600; }
 .cert-date { color: var(--muted); font-size: 0.8rem; margin: 4px 0 12px; }
