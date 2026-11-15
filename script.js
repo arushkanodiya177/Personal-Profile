@@ -78,14 +78,20 @@
         { id: "p6", title: "PERSONAL AI ASSISTANT", desc: "Exploration of AI assistants and automation ideas for daily tasks.", tech: "AI Tools, Automation", status: "Exploration", image: "", link: "" }
       ],
       certificates: [
-        { id: "c1", name: "Certificate Name (add yours)", org: "Issuing Organization", date: "YYYY", file: "", verify: "" }
+        { 
+          id: "c1", 
+          name: "HTML Essentials", 
+          org: "Cisco Networking Academy", 
+          date: "15 Jan 2026", 
+          file: "certificate-html-essentials.jpg", /* Place the uploaded image in the same folder */
+          verify: "" 
+        }
       ],
       achievements: [
         { id: "a1", title: "First Personal Project", desc: "Add your real programming milestone here from the admin dashboard." }
       ],
       socials: [
-        { id: "so1", label: "GitHub",   url: "https://github.com/" },
-        { id: "so2", label: "Instagram", url: "https://instagram.com/" }
+        { id: "so1", label: "Instagram", url: "https://www.instagram.com/kanodiya.arush/?hl=en" }
       ],
       settings: {
         email: "hello@example.com",
@@ -247,14 +253,18 @@
 
     const certGrid = $("#certGrid");
     certGrid.innerHTML = d.certificates.length
-      ? d.certificates.map(c => `
+      ? d.certificates.map(c => {
+          const imgSrc = c.file && c.file.trim() ? c.file : placeholderImage("Certificate");
+          return `
           <article class="cert-card glass reveal">
+            <img class="cert-img" src="${escapeHTML(imgSrc)}" alt="${escapeHTML(c.name)}" loading="lazy" onerror="this.onerror=null;this.src='${placeholderImage('Certificate')}'">
             <h3 class="cert-name">${escapeHTML(c.name)}</h3>
             <p class="cert-org">${escapeHTML(c.org || "—")}</p>
             <p class="cert-date">${escapeHTML(c.date || "")}</p>
             ${c.verify ? `<a class="cert-link" href="${escapeHTML(c.verify)}" target="_blank" rel="noopener noreferrer">Verify →</a>` : ""}
-            ${c.file ? `<a class="cert-link" href="${escapeHTML(c.file)}" target="_blank" rel="noopener noreferrer" style="margin-left:12px">View file →</a>` : ""}
-          </article>`).join("")
+            ${c.file ? `<a class="cert-link" href="${escapeHTML(c.file)}" target="_blank" rel="noopener noreferrer" style="margin-left:12px">View original →</a>` : ""}
+          </article>`;
+        }).join("")
       : `<p class="empty-state">No certificates added yet.</p>`;
 
     const achieveGrid = $("#achieveGrid");
