@@ -1,16 +1,5 @@
 /* =========================================================
    ARUSH KANODIYA — PORTFOLIO LOGIC
-   ---------------------------------------------------------
-   SECURITY WARNING
-   This is a front-end demo. Admin credentials below are
-   hardcoded and visible to anyone who reads this file.
-   For a real public site you MUST:
-     - move authentication to a backend (Node/PHP/Firebase)
-     - hash passwords (bcrypt/argon2)
-     - use secure HTTP-only session cookies
-     - authorise every write on the server
-   This file stores demo credentials so you can preview the
-   dashboard, nothing more. Do not ship it as real security.
    ========================================================= */
 
 (() => {
