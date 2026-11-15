@@ -72,7 +72,7 @@
           name: "HTML Essentials", 
           org: "Cisco Networking Academy", 
           date: "15 Jan 2026", 
-          file: "certificate-html-essentials.jpg", /* Place the uploaded image in the same folder */
+          file: "certificate-html-essentials.jpg.pdf", /* Place the uploaded image in the same folder */
           verify: "" 
         }
       ],
