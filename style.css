@@ -246,8 +246,9 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; colo
 
 /* -------- CERTIFICATES / ACHIEVEMENTS -------- */
 .cert-grid, .achieve-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-.cert-card, .achieve-card { padding: 24px; transition: transform .3s, border-color .3s; }
+.cert-card, .achieve-card { padding: 24px; transition: transform .3s, border-color .3s; display: flex; flex-direction: column; }
 .cert-card:hover, .achieve-card:hover { transform: translateY(-4px); border-color: rgba(176,108,255,0.4); }
+.cert-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 16px; border: 1px solid var(--border); background: #fff; }
 .cert-name, .achieve-title { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 6px; }
 .cert-org { color: var(--accent); font-size: 0.85rem; font-weight: 600; }
 .cert-date { color: var(--muted); font-size: 0.8rem; margin: 4px 0 12px; }
