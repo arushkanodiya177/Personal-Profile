@@ -1,16 +1,6 @@
 /* =========================================================
    ARUSH KANODIYA — PORTFOLIO LOGIC
    ---------------------------------------------------------
-   SECURITY WARNING
-   This is a front-end demo. Admin credentials below are
-   hardcoded and visible to anyone who reads this file.
-   For a real public site you MUST:
-     - move authentication to a backend (Node/PHP/Firebase)
-     - hash passwords (bcrypt/argon2)
-     - use secure HTTP-only session cookies
-     - authorise every write on the server
-   This file stores demo credentials so you can preview the
-   dashboard, nothing more. Do not ship it as real security.
    ========================================================= */
 
 (() => {
@@ -52,7 +42,7 @@
       experience: [
         { id: "e1", period: "2021 — Present", title: "Programming & Web Development", desc: "Learning and building with HTML, CSS, JavaScript, and modern web tooling. Turning ideas into working interfaces and apps." },
         { id: "e2", period: "2022 — Present", title: "Arduino & Electronics", desc: "Exploring microcontrollers and hardware: LED matrixes, sensors, and prototype circuits for real-world projects." },
-        { id: "e3", period: "2023 — Present", title: "Creative Digital Projects", desc: "Designing wallpapers, visual content, and anime-inspired creative work under ASTRA WALLS." },
+        { id: "e3", period: "2023 — Present", title: "Creative Digital Projects", desc: "Designing wallpapers, visual content, and anime-inspired creative work." },
         { id: "e4", period: "2024 — Present", title: "AI Tools & Automation", desc: "Investigating AI assistants, automation ideas, and how AI tooling can enhance productivity and creativity." }
       ],
       skills: [
@@ -70,9 +60,8 @@
         { id: "s12", name: "Technology Research", level: 70 }
       ],
       projects: [
-        { id: "p1", title: "CHRONIX", desc: "Arduino-based LED matrix clock project with digital clock display and custom display modes.", tech: "Arduino, C++, Electronics", status: "In Progress", image: "", link: "" },
+        { id: "p1", title: "NEXORA – Smart Environment Guardian", desc: "A compact smart device that monitors its surroundings and displays environmental information in real time.", tech: "IoT, Hardware, Sensors", status: "Concept", image: "", link: "" },
         { id: "p2", title: "Sign2Speak", desc: "ESP32-based sign language translation glove concept using flex sensors and voice output.", tech: "ESP32, Flex Sensors, Voice", status: "Concept", image: "", link: "" },
-        { id: "p3", title: "ASTRA WALLS", desc: "Digital wallpaper brand and creative design project — anime-inspired and premium aesthetic wallpapers.", tech: "Design, Branding", status: "Ongoing", image: "", link: "" },
         { id: "p4", title: "MEXT", desc: "Anime streaming platform concept focused on anime discovery and a personalised user experience.", tech: "Web Concepts, UI/UX", status: "Concept", image: "", link: "" },
         { id: "p5", title: "GAME VERSE", desc: "Video game arcade website concept with registration, food menu, reviews, and administration.", tech: "Web, UI/UX", status: "Concept", image: "", link: "" },
         { id: "p6", title: "PERSONAL AI ASSISTANT", desc: "Exploration of AI assistants and automation ideas for daily tasks.", tech: "AI Tools, Automation", status: "Exploration", image: "", link: "" }
@@ -94,7 +83,7 @@
         { id: "so1", label: "Instagram", url: "https://www.instagram.com/kanodiya.arush/?hl=en" }
       ],
       settings: {
-        email: "hello@example.com",
+        email: "arushkanodiya@gmail.com", /* Your Gmail address */
         accent: "#6c8cff",
         accent2: "#b06cff",
         tagline: "Arush Kanodiya — Portfolio"
@@ -185,6 +174,19 @@
         </text>
       </svg>`;
     return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+  }
+
+  // Maps social label to an SVG icon
+  function getSocialIcon(label) {
+    const l = (label || "").toLowerCase();
+    if (l.includes("insta")) {
+      return `<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>`;
+    }
+    if (l.includes("git")) {
+      return `<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>`;
+    }
+    // Fallback: first two letters
+    return escapeHTML(label.slice(0, 2).toUpperCase());
   }
 
   /* ======================================================
@@ -278,7 +280,7 @@
 
     const socialsHTML = d.socials
       .filter(s => s.label && s.url)
-      .map(s => `<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(s.label)}">${escapeHTML(s.label.slice(0, 2).toUpperCase())}</a>`)
+      .map(s => `<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(s.label)}">${getSocialIcon(s.label)}</a>`)
       .join("");
     $("#heroSocials").innerHTML = socialsHTML || `<span class="section-note">Add social links in admin.</span>`;
     $("#contactSocials").innerHTML = socialsHTML || `<span class="section-note">No links yet.</span>`;
