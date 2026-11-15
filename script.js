@@ -1,6 +1,16 @@
 /* =========================================================
    ARUSH KANODIYA — PORTFOLIO LOGIC
    ---------------------------------------------------------
+   SECURITY WARNING
+   This is a front-end demo. Admin credentials below are
+   hardcoded and visible to anyone who reads this file.
+   For a real public site you MUST:
+     - move authentication to a backend (Node/PHP/Firebase)
+     - hash passwords (bcrypt/argon2)
+     - use secure HTTP-only session cookies
+     - authorise every write on the server
+   This file stores demo credentials so you can preview the
+   dashboard, nothing more. Do not ship it as real security.
    ========================================================= */
 
 (() => {
@@ -50,7 +60,6 @@
         { id: "s2",  name: "CSS",                 level: 85 },
         { id: "s3",  name: "JavaScript",          level: 80 },
         { id: "s4",  name: "Arduino",             level: 70 },
-        { id: "s5",  name: "C / C++ (Basic)",     level: 55 },
         { id: "s6",  name: "Web Development",     level: 80 },
         { id: "s7",  name: "UI / UX Design",      level: 70 },
         { id: "s8",  name: "Electronics",         level: 60 },
@@ -77,7 +86,11 @@
         }
       ],
       achievements: [
-        { id: "a1", title: "First Personal Project", desc: "Add your real programming milestone here from the admin dashboard." }
+        { 
+          id: "a1", 
+          title: "NEXORA – Smart Environment Guardian", 
+          desc: "Concept: A compact smart device that monitors its surroundings and displays environmental information in real time." 
+        }
       ],
       socials: [
         { id: "so1", label: "Instagram", url: "https://www.instagram.com/kanodiya.arush/?hl=en" }
