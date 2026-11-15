@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arush Kanodiya — Coder. Creator. Developer.</title>
+  <meta name="description" content="Arush Kanodiya — passionate coder, developer, and technology enthusiast. Exploring programming, web development, Arduino, AI, and creative digital projects." />
+  <meta name="author" content="Arush Kanodiya" />
+
+  <!-- Social preview metadata -->
+  <meta property="og:title" content="Arush Kanodiya — Coder. Creator. Developer." />
+  <meta property="og:description" content="Personal portfolio of Arush Kanodiya — programmer, technology enthusiast, and creative developer." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon placeholder (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a12'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%236c8cff'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= LOADING SCREEN ================= -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-logo">AK</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- ================= CUSTOM CURSOR ================= -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ================= SCROLL PROGRESS ================= -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= ANIMATED BACKGROUND ================= -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">ARUSH<span class="accent">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certificates</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#admin" class="nav-link nav-admin">Admin</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HOME / HERO ================= -->
+    <section id="home" class="hero section">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow reveal">— WELCOME TO MY DIGITAL SPACE</p>
+          <h1 class="hero-title reveal">
+            HEY, I'M <span class="gradient-text" id="heroName">ARUSH KANODIYA.</span>
+          </h1>
+          <h2 class="hero-sub reveal">
+            Coder. Creator. Developer. Future Innovator.
+          </h2>
+          <p class="hero-typing reveal">
+            <span id="typingText"></span><span class="caret">|</span>
+          </p>
+          <p class="hero-intro reveal" id="heroIntro">
+            I'm passionate about technology, programming, and creating digital experiences.
+            I love exploring new ideas, building projects, solving problems, and turning
+            imagination into reality through code.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#about" class="btn btn-ghost">About Me</a>
+          </div>
+
+          <div class="hero-socials reveal" id="heroSocials" aria-label="Social media links"></div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-frame">
+            <div class="profile-glow"></div>
+            <img id="profileImage" class="profile-img"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23141420'/%3E%3Ccircle cx='200' cy='160' r='70' fill='%232a2a44'/%3E%3Crect x='110' y='250' width='180' height='90' rx='45' fill='%232a2a44'/%3E%3C/svg%3E"
+                 alt="Arush Kanodiya profile" />
+            <div class="profile-ring"></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span class="scroll-text">SCROLL</span>
+      </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">01 — ABOUT ME</p>
+          <h2 class="section-title reveal">A curious mind, <span class="gradient-text">always building.</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-card glass reveal">
+            <p id="aboutText">
+              I'm <strong>Arush Kanodiya</strong> — a programmer, technology enthusiast, and creative developer
+              driven by curiosity. I'm passionate about coding and programming, and I love exploring how software
+              and hardware come together. My interests span web development, Arduino and electronics, artificial
+              intelligence, and creative digital design including graphic design and wallpapers. I'm always
+              learning new technologies and building useful projects that turn imagination into reality.
+            </p>
+          </div>
+
+          <div class="about-stats reveal">
+            <div class="stat glass">
+              <span class="stat-num" data-count="5">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Years of Coding Journey</span>
+            </div>
+            <div class="stat glass">
+              <span class="stat-num" data-count="6">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Personal Projects</span>
+            </div>
+            <div class="stat glass">
+              <span class="stat-num" data-count="12">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Technologies Explored</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">02 — MY EXPERIENCE</p>
+          <h2 class="section-title reveal">5 Years of <span class="gradient-text">Coding &amp; Programming</span></h2>
+          <p class="section-note reveal">
+            This represents my personal coding journey — learning, experimenting, building, and improving —
+            not professional employment.
+          </p>
+        </header>
+
+        <div class="timeline" id="experienceTimeline">
+          <!-- Injected by JS from experience data -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">03 — SKILLS &amp; TECHNOLOGIES</p>
+          <h2 class="section-title reveal">The tools I <span class="gradient-text">build with.</span></h2>
+          <p class="section-note reveal">Levels below are self-assessed and fully editable from the admin dashboard.</p>
+        </header>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">04 — MY PROJECTS</p>
+          <h2 class="section-title reveal">Things I've <span class="gradient-text">imagined &amp; built.</span></h2>
+        </header>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">05 — CERTIFICATIONS</p>
+          <h2 class="section-title reveal">Certifications &amp; <span class="gradient-text">Professional Learning</span></h2>
+          <p class="section-note reveal">Placeholder cards — add your real certificates from the admin dashboard.</p>
+        </header>
+
+        <div class="cert-grid" id="certGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">06 — ACHIEVEMENTS</p>
+          <h2 class="section-title reveal">Milestones &amp; <span class="gradient-text">moments.</span></h2>
+          <p class="section-note reveal">Add your real achievements from the admin dashboard.</p>
+        </header>
+
+        <div class="achieve-grid" id="achieveGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MORE ABOUT ME ================= -->
+    <section id="more" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">07 — MORE ABOUT ME</p>
+          <h2 class="section-title reveal">Beyond the <span class="gradient-text">code.</span></h2>
+        </header>
+
+        <div class="more-grid">
+          <article class="more-card glass reveal">
+            <h3>My Journey</h3>
+            <p id="journeyText">From my first lines of code to building hardware projects and exploring AI, my journey has been driven by curiosity, experimentation, and a constant desire to improve.</p>
+          </article>
+          <article class="more-card glass reveal">
+            <h3>My Interests</h3>
+            <p id="interestsText">Coding, technology, electronics, anime-inspired creativity, digital design, and innovation — I find inspiration everywhere and love turning it into something tangible.</p>
+          </article>
+          <article class="more-card glass reveal">
+            <h3>My Goals</h3>
+            <p id="goalsText">Becoming a better developer, creating innovative products, and exploring emerging technologies — while building things that are genuinely useful.</p>
+          </article>
+          <article class="more-card glass reveal philosophy-card">
+            <h3>My Philosophy</h3>
+            <p class="philosophy">"Dream it. Build it. Improve it."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow reveal">08 — CONTACT</p>
+          <h2 class="section-title reveal">Let's <span class="gradient-text">connect.</span></h2>
+          <p class="section-note reveal">Have an idea, question, or collaboration in mind? Reach out.</p>
+        </header>
+
+        <div class="contact-wrap">
+          <div class="contact-card glass reveal">
+            <h3>Email</h3>
+            <a id="contactEmail" href="mailto:hello@example.com">hello@example.com</a>
+          </div>
+          <div class="contact-card glass reveal">
+            <h3>Social</h3>
+            <div class="contact-socials" id="contactSocials"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="footerYear"></span> Arush Kanodiya. Built with curiosity &amp; code.</p>
+      <a href="#home" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP ================= -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- ================= ADMIN LOGIN MODAL ================= -->
+  <div id="adminLogin" class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="modal-card glass login-card">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <h2 id="loginTitle" class="login-title">Admin Access</h2>
+      <p class="login-sub">Private area — authorise to continue.</p>
+
+      <form id="loginForm" class="login-form" autocomplete="off">
+        <label class="field">
+          <span>Admin ID</span>
+          <input type="text" id="loginUser" required />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <div class="password-wrap">
+            <input type="password" id="loginPass" required />
+            <button type="button" class="toggle-pass" id="togglePass" aria-label="Show password">Show</button>
+          </div>
+        </label>
+        <p class="login-error" id="loginError" role="alert"></p>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= ADMIN DASHBOARD ================= -->
+  <div id="adminDashboard" class="dashboard" aria-hidden="true">
+    <div class="dash-layout">
+      <aside class="dash-sidebar">
+        <div class="dash-brand">
+          <span class="logo-mark">A</span>
+          <div>
+            <strong>Admin Panel</strong>
+            <small>Arush Kanodiya</small>
+          </div>
+        </div>
+
+        <nav class="dash-nav" id="dashNav">
+          <button data-panel="dashboard" class="active">Dashboard</button>
+          <button data-panel="about">Edit About Me</button>
+          <button data-panel="experience">Experience</button>
+          <button data-panel="skills">Manage Skills</button>
+          <button data-panel="projects">Manage Projects</button>
+          <button data-panel="certificates">Manage Certificates</button>
+          <button data-panel="achievements">Manage Achievements</button>
+          <button data-panel="social">Social Links</button>
+          <button data-panel="settings">Website Settings</button>
+          <button data-panel="data">Data / Backup</button>
+          <button data-action="logout" class="dash-logout">Logout</button>
+        </nav>
+      </aside>
+
+      <main class="dash-main">
+        <button class="dash-exit" id="dashExit" aria-label="Exit dashboard">← Exit Dashboard</button>
+
+        <!-- DASHBOARD -->
+        <section class="dash-panel active" data-panel="dashboard">
+          <h1>Dashboard</h1>
+          <p class="dash-sub">Overview of your portfolio content.</p>
+          <div class="dash-stats">
+            <div class="dash-stat glass"><span id="statProjects">0</span><label>Projects</label></div>
+            <div class="dash-stat glass"><span id="statSkills">0</span><label>Skills</label></div>
+            <div class="dash-stat glass"><span id="statCerts">0</span><label>Certificates</label></div>
+            <div class="dash-stat glass"><span id="statAchieve">0</span><label>Achievements</label></div>
+          </div>
+          <div class="dash-note glass">
+            <strong>Tip:</strong> Every change saves to this browser's localStorage. Use
+            <em>Data / Backup</em> to export a JSON file and move it to another browser or device.
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="dash-panel" data-panel="about">
+          <h1>Edit About Me</h1>
+          <form id="formAbout" class="dash-form">
+            <label class="field"><span>Display Name</span><input name="name" type="text" /></label>
+            <label class="field"><span>Tagline</span><input name="tagline" type="text" /></label>
+            <label class="field"><span>Hero Intro</span><textarea name="intro" rows="4"></textarea></label>
+            <label class="field"><span>About Me</span><textarea name="about" rows="6"></textarea></label>
+            <label class="field"><span>Profile Image URL</span><input name="profileImage" type="text" placeholder="https://..." /></label>
+            <label class="field"><span>My Journey</span><textarea name="journey" rows="3"></textarea></label>
+            <label class="field"><span>My Interests</span><textarea name="interests" rows="3"></textarea></label>
+            <label class="field"><span>My Goals</span><textarea name="goals" rows="3"></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+              <button type="reset" class="btn btn-ghost">Cancel</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="dash-panel" data-panel="experience">
+          <h1>Experience</h1>
+          <p class="dash-sub">Your coding journey timeline. Each item appears in the public timeline.</p>
+          <div id="expList" class="manager-list"></div>
+          <form id="formExp" class="dash-form manager-form">
+            <h3 class="form-title">Add / Edit Timeline Item</h3>
+            <input type="hidden" name="id" />
+            <label class="field"><span>Period</span><input name="period" type="text" placeholder="e.g. 2022 — Present" /></label>
+            <label class="field"><span>Title</span><input name="title" type="text" /></label>
+            <label class="field"><span>Description</span><textarea name="desc" rows="3"></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Item</button>
+              <button type="reset" class="btn btn-ghost">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="dash-panel" data-panel="skills">
+          <h1>Manage Skills</h1>
+          <div id="skillList" class="manager-list"></div>
+          <form id="formSkill" class="dash-form manager-form">
+            <h3 class="form-title">Add / Edit Skill</h3>
+            <input type="hidden" name="id" />
+            <label class="field"><span>Skill Name</span><input name="name" type="text" required /></label>
+            <label class="field"><span>Level (0–100)</span><input name="level" type="number" min="0" max="100" value="50" /></label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Skill</button>
+              <button type="reset" class="btn btn-ghost">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="dash-panel" data-panel="projects">
+          <h1>Manage Projects</h1>
+          <div id="projList" class="manager-list"></div>
+          <form id="formProj" class="dash-form manager-form">
+            <h3 class="form-title">Add / Edit Project</h3>
+            <input type="hidden" name="id" />
+            <label class="field"><span>Title</span><input name="title" type="text" required /></label>
+            <label class="field"><span>Description</span><textarea name="desc" rows="3" required></textarea></label>
+            <label class="field"><span>Technologies (comma separated)</span><input name="tech" type="text" placeholder="Arduino, C++" /></label>
+            <label class="field"><span>Status</span>
+              <select name="status">
+                <option>In Progress</option>
+                <option>Completed</option>
+                <option>Concept</option>
+                <option>Planned</option>
+              </select>
+            </label>
+            <label class="field"><span>Image URL</span><input name="image" type="text" placeholder="https://..." /></label>
+            <label class="field"><span>Project Link</span><input name="link" type="text" placeholder="https://..." /></label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Project</button>
+              <button type="reset" class="btn btn-ghost">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section class="dash-panel" data-panel="certificates">
+          <h1>Manage Certificates</h1>
+          <div id="certList" class="manager-list"></div>
+          <form id="formCert" class="dash-form manager-form">
+            <h3 class="form-title">Add / Edit Certificate</h3>
+            <input type="hidden" name="id" />
+            <label class="field"><span>Certificate Name</span><input name="name" type="text" required /></label>
+            <label class="field"><span>Issuing Organization</span><input name="org" type="text" /></label>
+            <label class="field"><span>Issue Date</span><input name="date" type="text" placeholder="e.g. 2024" /></label>
+            <label class="field"><span>Image / PDF URL</span><input name="file" type="text" placeholder="https://..." /></label>
+            <label class="field"><span>Verification Link</span><input name="verify" type="text" placeholder="https://..." /></label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Certificate</button>
+              <button type="reset" class="btn btn-ghost">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="dash-panel" data-panel="achievements">
+          <h1>Manage Achievements</h1>
+          <div id="achList" class="manager-list"></div>
+          <form id="formAch" class="dash-form manager-form">
+            <h3 class="form-title">Add / Edit Achievement</h3>
+            <input type="hidden" name="id" />
+            <label class="field"><span>Title</span><input name="title" type="text" required /></label>
+            <label class="field"><span>Description</span><textarea name="desc" rows="3"></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Achievement</button>
+              <button type="reset" class="btn btn-ghost">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- SOCIAL -->
+        <section class="dash-panel" data-panel="social">
+          <h1>Social Links &amp; Contact</h1>
+          <form id="formSocial" class="dash-form">
+            <label class="field"><span>Email</span><input name="email" type="email" /></label>
+            <div id="socialList" class="manager-list"></div>
+            <h3 class="form-title">Add / Edit Social Link</h3>
+            <input type="hidden" name="socialId" />
+            <label class="field"><span>Label</span><input name="socialLabel" type="text" placeholder="GitHub" /></label>
+            <label class="field"><span>URL</span><input name="socialUrl" type="text" placeholder="https://..." /></label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Social Links</button>
+              <button type="reset" class="btn btn-ghost">Cancel</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="dash-panel" data-panel="settings">
+          <h1>Website Settings</h1>
+          <form id="formSettings" class="dash-form">
+            <label class="field"><span>Accent Color</span>
+              <input name="accent" type="color" />
+            </label>
+            <label class="field"><span>Secondary Accent</span>
+              <input name="accent2" type="color" />
+            </label>
+            <label class="field"><span>Website Tagline (browser title suffix)</span>
+              <input name="tagline" type="text" />
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Settings</button>
+              <button type="button" class="btn btn-ghost" id="restoreDefaults">Restore Default Content</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- DATA -->
+        <section class="dash-panel" data-panel="data">
+          <h1>Data / Backup</h1>
+          <p class="dash-sub">Export your portfolio content as JSON, or import a saved file.</p>
+          <div class="data-actions">
+            <button class="btn btn-primary" id="btnExport">Export JSON</button>
+            <label class="btn btn-ghost file-import">
+              Import JSON
+              <input type="file" id="fileImport" accept="application/json" hidden />
+            </label>
+          </div>
+          <div class="dash-note glass">
+            localStorage is stored per browser and is not a secure database or shared server.
+            Use this export to back up content and move it to another device.
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- ================= TOAST ================= -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
